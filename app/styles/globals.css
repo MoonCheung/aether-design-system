@@ -1,4 +1,12 @@
 @import 'tailwindcss';
+@config '../../tailwind.config.ts';
+@plugin "@tailwindcss/forms" {
+  strategy: class;
+}
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/container-queries";
+@plugin "tailwindcss-animate";
+
 
 :root {
   /* #region  /**=========== Primary Color =========== */
