@@ -5,6 +5,10 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import { reactRouter } from '@react-router/dev/vite'
 
 export default defineConfig(({ command }) => ({
+  // server: {
+  //   port: 8080,
+  //   strictPort: true
+  // },
   css: {
     postcss: {
       plugins: [autoprefixer]

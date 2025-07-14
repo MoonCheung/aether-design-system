@@ -7,10 +7,10 @@
 export const exactLength = (length: number, message: string) => ({
   minLength: {
     value: length,
-    message,
+    message
   },
   maxLength: {
     value: length,
-    message,
-  },
-});
+    message
+  }
+})

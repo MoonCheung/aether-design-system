@@ -1,19 +1,19 @@
-import queryString, { StringifyOptions } from 'query-string';
+import queryString, { StringifyOptions } from 'query-string'
 
-type ToastType = 'success' | 'error' | 'loading' | 'blank' | 'custom';
+type ToastType = 'success' | 'error' | 'loading' | 'blank' | 'custom'
 
 export const generateToastQuery = ({
   message,
   type,
   url,
   additionalQuery,
-  options,
+  options
 }: {
-  message: string;
-  type: ToastType;
-  url: string;
-  additionalQuery?: Record<string, unknown>;
-  options?: StringifyOptions;
+  message: string
+  type: ToastType
+  url: string
+  additionalQuery?: Record<string, unknown>
+  options?: StringifyOptions
 }) =>
   queryString.stringifyUrl(
     {
@@ -21,12 +21,12 @@ export const generateToastQuery = ({
       query: {
         toast_message: message,
         toast_type: type,
-        ...additionalQuery,
-      },
+        ...additionalQuery
+      }
     },
     {
       arrayFormat: 'comma',
       skipEmptyString: true,
-      ...options,
-    },
-  );
+      ...options
+    }
+  )
