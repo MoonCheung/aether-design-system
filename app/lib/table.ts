@@ -1,6 +1,6 @@
-import queryString, { StringifyOptions } from 'query-string'
+import queryString, { type StringifyOptions } from 'query-string'
 
-import { ServerTableState } from '~/components/table/ServerTable'
+import { type ServerTableState } from '~/components/table/ServerTable'
 
 type BuildPaginationTableParam = {
   /** API Base URL, with / on the front */
