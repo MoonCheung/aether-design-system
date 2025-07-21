@@ -1,7 +1,7 @@
-import type { Route } from './+types/home'
+import * as React from 'react';
 import { Meta, Links, ScrollRestoration, Scripts } from 'react-router'
 
-export default function Layout({ children }: { children: Route.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
       <head>
