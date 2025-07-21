@@ -1,4 +1,3 @@
-import type { Route } from './+types/home'
 import * as React from 'react'
 import clsxm from '~/lib/clsxm'
 
@@ -8,22 +7,22 @@ const TypographyColor = ['primary', 'secondary', 'tertiary', 'danger', 'white'] 
 
 const TypographyFont = ['averta', 'inter'] as const
 
-type TypographyProps<T extends Route.ElementType> = {
+type TypographyProps<T extends React.ElementType> = {
   /** @default <p> tag */
   as?: T
   className?: string
   color?: (typeof TypographyColor)[number]
   variant?: (typeof TypographyVariant)[number]
   font?: (typeof TypographyFont)[number]
-  children: Route.ReactNode
-} & Route.ComponentPropsWithoutRef<T>
+  children: React.ReactNode
+} & React.ComponentPropsWithoutRef<T>
 
-type TypographyComponent = <T extends Route.ElementType = 'p'>(props: TypographyProps<T>) => Route.ReactNode | null
+type TypographyComponent = <T extends React.ElementType = 'p'>(props: TypographyProps<T>) => React.ReactNode | null
 
 const Typography: TypographyComponent = React.forwardRef(
   <T extends React.ElementType = 'p'>(
     { as, children, className, color = 'primary', variant = 'b2', font, ...rest }: TypographyProps<T>,
-    ref?: Route.ComponentPropsWithRef<T>['ref']
+    ref?: React.ComponentPropsWithRef<T>['ref']
   ) => {
     const Component = as || 'p'
     return (
