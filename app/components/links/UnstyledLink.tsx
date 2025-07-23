@@ -1,17 +1,17 @@
-import type { Route } from './+types/home'
 import * as React from 'react';
+import { Link, type LinkProps } from "react-router";
 
 import clsxm from '~/lib/clsxm';
 
 export type UnstyledLinkProps = {
   href: string
-  children: Route.ReactNode
+  children: React.ReactNode
   openNewTab?: boolean
   className?: string
-  nextLinkProps?: Omit<Route.LinkProps, 'href'>
-} & Route.ComponentPropsWithRef<'a'>
+  nextLinkProps?: Omit<LinkProps, 'to'>
+} & React.ComponentPropsWithRef<'a'>
 
-const UnstyledLink = React.forwardRef<Route.HTMLAnchorElement, UnstyledLinkProps>(({children, href, openNewTab, className, nextLinkProps, ...rest}, ref => {
+const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(({children, href, openNewTab, className, nextLinkProps, ...rest}, ref => {
   const isNewTab = openNewTab !== undefined 
     ? openNewTab 
     : href && !href.startsWith('/') && !href.startsWith('#');
