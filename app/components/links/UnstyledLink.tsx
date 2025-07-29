@@ -20,7 +20,7 @@ export const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProp
   if(!isNewTab) {
     return (
       <Link
-        href={href}
+        to={href}
         ref={ref}
         className={className}
         {...rest}
