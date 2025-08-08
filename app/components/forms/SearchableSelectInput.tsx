@@ -7,7 +7,7 @@ import Select, { components, type MultiValue, type StylesConfig } from 'react-se
 import Typography from '~/components/typography/Typography';
 
 import { type ExtractProps } from '~/types/helper';
-import clsx from 'clsx';
+import clsxm from '~/lib/clsxm';
 
 export type SearchableSelectInputProps = {
   label: string | null;
@@ -154,7 +154,7 @@ export function SearchableSelectInput({
         </Typography>
       )}
       <div
-        className={clsx(
+        className={clsxm(
           'relative',
           withLabel && 'mt-1',
           (disabled || readOnly) && 'cursor-not-allowed',
