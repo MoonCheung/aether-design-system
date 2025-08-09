@@ -4,7 +4,7 @@ import { ChevronDown, X } from 'lucide-react';
 import { Controller, type RegisterOptions, useFormContext } from 'react-hook-form';
 import Select, { components, type MultiValue, type StylesConfig } from 'react-select';
 
-import Typography from '~/components/typography/Typography';
+import Typography from '~/components/Typography';
 
 import { type ExtractProps } from '~/types/helper';
 import clsxm from '~/lib/clsxm';

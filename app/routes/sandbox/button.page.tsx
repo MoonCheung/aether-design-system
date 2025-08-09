@@ -9,7 +9,7 @@ import Layout from "~/components/layout/Layout";
 import { Input } from '~/components/forms/index';
 import { Button } from '~/components/buttons/index';
 import { ButtonLink } from '~/components/links/index';
-import Typography from '~/components/typography/Typography';
+import Typography from '~/components/Typography';
 
 export default function ButtonPage() {
   //#region  //*=========== Form ===========

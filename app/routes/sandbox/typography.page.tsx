@@ -1,7 +1,7 @@
 import type { Route } from "./+types/typography";
 import * as React from 'react';
 import Layout from '~/components/layout/Layout';
-import Typography from '~/components/typography/Typography';
+import Typography from '~/components/Typography';
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'Typography' }]

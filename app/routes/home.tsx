@@ -1,7 +1,7 @@
 import type { Route } from './+types/home'
 import Layout from '~/components/layout/Layout'
 
-import Typography from '~/components/typography/Typography'
+import Typography from '~/components/Typography'
 import { UnderlineLink, ButtonLink } from '~/components/links/index'
 
 export function meta({}: Route.MetaArgs) {

@@ -2,7 +2,7 @@ import type { Route } from "./+types/colors";
 import * as React from 'react';
 import Layout from '~/components/layout/Layout';
 import ColorBox from '~/components/color/ColorBox';
-import Typography from '~/components/typography/Typography';
+import Typography from '~/components/Typography';
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'ColorBox' }]

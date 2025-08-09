@@ -2,7 +2,7 @@ import * as React from 'react';
 import { get } from 'es-toolkit/compat';
 import { type LucideIcon } from 'lucide-react';
 import { type RegisterOptions, useFormContext } from 'react-hook-form';
-import Typography from '~/components/typography/Typography';
+import Typography from '~/components/Typography';
 
 import clsxm from '~/lib/clsxm';
 
