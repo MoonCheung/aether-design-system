@@ -11,6 +11,9 @@ import { Button } from '~/components/buttons/index';
 import { ButtonLink } from '~/components/links/index';
 import Typography from '~/components/Typography';
 
+export function meta({}: Route.MetaArgs) {
+  return [{ title: 'Button' }]
+}
 export default function ButtonPage() {
   //#region  //*=========== Form ===========
   const methods = useForm({
