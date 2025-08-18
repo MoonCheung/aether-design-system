@@ -20,7 +20,7 @@ type ModalProps = {
   titleClassName?: string
 } & Omit<ExtractProps<typeof Dialog>, 'onClose' | 'unmount'>
 
-export default function ModalRoot({
+export function ModalRoot({
   className,
   children,
   modalContainerClassName,
@@ -106,3 +106,20 @@ export default function ModalRoot({
     </Transition>
   )
 }
+
+/**
+ * defaults to p-4 sm:p-6, change it with className if needed
+ */
+function Section({
+  className,
+  children,
+}: React.ComponentPropsWithoutRef<'div'>) {
+  return (
+    <div className={clsxm('flex w-full flex-col', 'p-4 sm:p-6', className)}>
+      {children}
+    </div>
+  );
+}
+
+const Modal = Object.assign(ModalRoot, { Section });
+export default Modal;
