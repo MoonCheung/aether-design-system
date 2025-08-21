@@ -1,8 +1,49 @@
 import type { Route } from "./+types/mac-cards";
 import * as React from 'react';
 
-export default function MacCards() {
+import { MacCard } from '~/components/cards/index';
+import Layout from '~/components/layout/Layout';
+import Typography from '~/components/Typography';
+
+export function meta({}: Route.MetaArgs) {
+  return [{ title: 'Mac Card' }]
+}
+
+export default function MacCardPage() {
   return (
-    <div>hello 子路由: MacCards</div>
+    <Layout>
+      <main>
+        <div className='layout min-h-screen py-20'>
+          <MacCard className='mt-8'>
+            <div className='flex flex-col gap-2'>
+              <div className='rounded-lg bg-white p-3'>
+                <Typography variant='b2'>Hello</Typography>
+              </div>
+              <div className='rounded-lg bg-white p-3'>
+                <Typography variant='s2' font='averta'>
+                  Telepon Langsung
+                </Typography>
+                <Typography variant='b2' color='tertiary' font='averta'>
+                  Hello
+                </Typography>
+              </div>
+            </div>
+          </MacCard>
+
+          <MacCard>
+            <Typography variant='b2'>Hello</Typography>
+          </MacCard>
+
+          <div className='mt-4 bg-light p-4'>
+            <Typography as='h2' variant='h2'>
+              Light Mode
+            </Typography>
+            <MacCard mode='light' className='mt-3'>
+              <Typography variant='b2'>Hello</Typography>
+            </MacCard>
+          </div>
+        </div>
+      </main>
+    </Layout>
   )
 }
