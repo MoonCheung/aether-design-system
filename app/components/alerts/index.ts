@@ -1,1 +1,2 @@
-export { Alert } from './alert'
+export { Alert } from './Alert'
+export { TypographyAlert } from './TypographyAlert'
