@@ -37,8 +37,8 @@ export function StatisticsCard({
   return (
     <div
       className={clsxm(
-        'rounded-xl bg-white p-3',
-        'border border-typo-divider',
+        'rounded-xl p-3 bg-white dark:bg-white/5',
+        'border border-typo-divider dark:border-typo-secondary',
         'flex items-center gap-3',
         className,
       )}
@@ -47,11 +47,11 @@ export function StatisticsCard({
       {Icon && (
         <div
           className={clsxm('rounded-lg p-2', [
-            variant === 'primary' && ['bg-primary-50'],
-            variant === 'secondary' && ['bg-secondary-50'],
-            variant === 'warning' && ['bg-yellow-50'],
-            variant === 'danger' && ['bg-red-50'],
-            variant === 'success' && ['bg-green-50'],
+            variant === 'primary' && ['bg-primary-50 dark:bg-primary-900'],
+            variant === 'secondary' && ['bg-secondary-50 dark:bg-secondary-900'],
+            variant === 'warning' && ['bg-yellow-50 dark:bg-yellow-900'],
+            variant === 'danger' && ['bg-red-50 dark:bg-red-900'],
+            variant === 'success' && ['bg-green-50 dark:bg-green-900'],
           ])}
         >
           <Icon

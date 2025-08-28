@@ -15,8 +15,8 @@ export function DevelopmentCard({
   return shouldShow ? (
     <SimpleCard
       className={clsxm([
-        'border-2 border-dashed border-secondary-500 bg-secondary-50',
-        'pt-2',
+        'border-2 border-dashed pt-2',
+        'border-secondary-500 bg-secondary-50 dark:broder-secondary-500/20 dark:bg-secondary-900',
         className,
       ])}
       size='sm'
