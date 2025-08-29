@@ -26,5 +26,6 @@ export default [
     route('card', './routes/sandbox/card.page.tsx'),
     route('development-card', './routes/sandbox/development-card.page.tsx'),
     route('statistics-card', './routes/sandbox/statistics-card.page.tsx')
-  ])
+  ]),
+  route("*?", "./routes/_404.tsx")
 ] satisfies RouteConfig
