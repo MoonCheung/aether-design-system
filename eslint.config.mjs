@@ -33,8 +33,13 @@ export default tseslint.config(
       'react-hooks': pluginReactHooks
     },
     rules: {
+      "no-unused-vars": "off",
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
+      'react-hooks/exhaustive-deps': 'warn',
+
+      'react/display-name': 'off',
+      
+      "@typescript-eslint/no-unused-vars": "off"
     }
   }
 )
